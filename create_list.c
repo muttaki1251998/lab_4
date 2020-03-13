@@ -1,6 +1,6 @@
 #include "header.h"
 
-void create_list(int num_nodes)
+Node *create_list(int num_nodes)
 {    
     int i = 0;   
     int j[num_nodes]; 
@@ -21,35 +21,20 @@ void create_list(int num_nodes)
 
         key2[i] = rand_double(50.0, 90.0);
     }
+
+    node->value = j[0];
+    node->key1 = key1[0];
+    node->key2 = key2[0];
     
     
-    for(i=0; i<=num_nodes; i++)
+    for(i=1; i<num_nodes; i++)
     {           
         insert_node(node, j, key1, key2, num_nodes, i);
     }  
+       
 
-
-    while (node != NULL)
-    {   
-        printf("%d\n", node->value);
-        printf("%.2f\n", node->key1);
-        printf("%.2f\n", node->key2);
-
-        node = node->next;        
-    }  
+    return node;
 
 }
 
 
-
-/* Node (*f_ptr[])(Node, int, double, double) = {insert_node, insert_node}; 
-
-for(i=1; i<=num_nodes; i++)
-    {
-        (f_ptr[i])(*node, i, key1, key2);
-    }
-
-     
-
-
-*/

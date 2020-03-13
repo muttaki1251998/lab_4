@@ -8,12 +8,15 @@ typedef struct Data
     double key1;
     double key2;
     struct Data *head;
+    struct Data *sort1_head;
     struct Data *next;
     struct Data *sort1;
     struct Data *sort2;
 } Node;
 
-void create_list(int num_nodes);
+Node *create_list(int num_nodes);
 double rand_double(double a, double b);
 int rand_int(int a, int b);
 Node *insert_node(Node *prev, int *i_value, double *key1, double *key2, int num_nodes, int loop);
+void sort1_ascending(Node *node, int num_nodes);
+void print_node(Node *node);

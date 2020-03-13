@@ -2,8 +2,7 @@
 
 Node *insert_node(Node *prev, int *i_value, double *key1, double *key2, int num_nodes, int loop)
 {
-    Node *new_node = (Node *)malloc(sizeof(Node));
-    int i = 0;        
+    Node *new_node = (Node *)malloc(sizeof(Node));        
 
         if(prev != NULL)
         {
