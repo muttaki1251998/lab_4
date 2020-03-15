@@ -1,17 +1,39 @@
 #include "header.h"
 
-void sort1_ascending(Node *node, int num_nodes)
+Node *sort1_ascending(Node *current)
 {
+    double min;
+    Node *sort1_head = NULL, *ascended_node = NULL;
+    ascended_node = (Node *)malloc(sizeof(Node));
 
-    Node *sort1_head = node;    
+    min = current->key1;
+
+    if(current == NULL)
+    {
+        
+    }
+
+    while (current != NULL)
+    {
+        if(min > current->key1)   
+        {
+            min = current->key1;       
+        }
+        
+        current = current->next;        
+    }
+
+    printf("Min: %.2f\n", min);
+
+    /* Get the node that holds the minimum value */
+    sort1_head = find_node(current, min); 
+
+    if(sort1_head == NULL)
+        printf("It's still null.\n");
+    else
+        printf("It's not null.\n");
+
     
-    while (sort1_head != NULL)
-    {   
-        printf("%d\n", sort1_head->value);
-        printf("%.2f\n", sort1_head->key1);
-        printf("%.2f\n", sort1_head->key2);
 
-        sort1_head = sort1_head->sort1;        
-    } 
-
+     
 }

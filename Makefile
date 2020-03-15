@@ -1,5 +1,5 @@
-main: print_node.o sort1_ascending.o create_list.o insert_node.o rand_double.o rand_int.o main.c
-	gcc -ansi -Wall print_node.o sort1_ascending.o create_list.o insert_node.o rand_double.o rand_int.o main.c -o main
+main: find_node.o print_node.o sort1_ascending.o create_list.o insert_node.o rand_double.o rand_int.o main.c
+	gcc -ansi -Wall find_node.o print_node.o sort1_ascending.o create_list.o insert_node.o rand_double.o rand_int.o main.c -o main
 
 create_list.o: create_list.c
 	gcc -ansi -Wall -c create_list.c
@@ -13,6 +13,8 @@ sort1_ascending.o: sort1_ascending.o
 	gcc -ansi -Wall -c sort1_ascending.c 
 print_node.o: print_node.o
 	gcc -ansi -Wall -c print_node.c
+find_node.o: find_node.c
+	gcc -ansi -Wall -c find_node.c
 
 clean:
 	rm *.o main

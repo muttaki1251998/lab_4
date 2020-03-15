@@ -5,14 +5,8 @@ Node *create_list(int num_nodes)
     int i = 0;   
     int j[num_nodes]; 
     double key1[num_nodes], key2[num_nodes];  
-    Node *node = (Node *)malloc(sizeof(Node));
-    
-    if(node == NULL)
-    {
-        node->head = NULL;
-    }
-    
-
+    Node *node = (Node *)malloc(sizeof(Node));   
+       
     for(i=0; i<num_nodes; i++)
     {        
         j[i] = rand_int(1, 10);
@@ -30,8 +24,7 @@ Node *create_list(int num_nodes)
     for(i=1; i<num_nodes; i++)
     {           
         insert_node(node, j, key1, key2, num_nodes, i);
-    }  
-       
+    }   
 
     return node;
 
